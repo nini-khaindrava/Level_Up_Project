@@ -27,7 +27,7 @@ namespace Level_Up_Project.Tests
             registration.EnterPassword(randomPassword);
             registration.ConfirmPassword(randomPassword);
             registration.ClickSubmit();
-            Assert.IsTrue(registration.ScuccessMessageIsDisplayed(),"Account was not created");
+            Assert.IsTrue(registration.ScuccessMessageIsDisplayed(),"Account was not created");       
         }
         [Test, Order(2)]
         public void SignIn()

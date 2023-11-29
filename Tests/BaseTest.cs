@@ -1,3 +1,4 @@
+using Allure.Commons;
 using OpenQA.Selenium;
 
 namespace Level_Up_Project.Tests
@@ -22,5 +23,6 @@ namespace Level_Up_Project.Tests
          driver.Quit();
         }
 
-        }
+
     }
+}

@@ -1,6 +1,6 @@
 ﻿namespace Level_Up_Project
 {
-    public class RandomDateGenerator
+    public  static class RandomDateGenerator
     {
        
         private static Random random = new Random();
