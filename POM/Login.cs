@@ -11,6 +11,7 @@ namespace Level_Up_Project.POM
         private const string singInBt = "send2";
         private const string userLoggedIn = "(//span[@class='logged-in'])[1]";
         private const string signInError = "//div[@data-ui-id='message-error']";
+       
 
         public Login(IWebDriver driver)
         {
@@ -22,7 +23,7 @@ namespace Level_Up_Project.POM
         }
         public void EnterPassword(string password)
         {
-            driver.FindElement(By.Id(passwd)).SendKeys(passwd);
+            driver.FindElement(By.Id(passwd)).SendKeys(password);
         }
         public void ClickSignIn() {
 
@@ -33,11 +34,11 @@ namespace Level_Up_Project.POM
             return driver.FindElement(By.XPath(userLoggedIn)).Displayed;
         }
 
-        public bool SingInErrOrror()
+        public bool SingInErrOrrorIsDisplayed()
         {
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath(signInError)));
-            return driver.FindElement(By.XPath(signInError)).Displayed;
+            return driver.FindElement(By.XPath(signInError)).Displayed!;
         }
     }
 }

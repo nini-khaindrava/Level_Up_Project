@@ -71,7 +71,7 @@ namespace Level_Up_Project.Tests
             Assert.IsTrue(mainPage.JacketsPageIsOpened(), " Chosen Category page is not opened");
         }
         [Test, Order(6)]
-        public void DeleteProductFromCart()
+        public void InvalidCredentials()
         {
             MainPage mainPage = new MainPage(driver);
             mainPage.Login();
@@ -79,7 +79,7 @@ namespace Level_Up_Project.Tests
             loginPage.EnterEmail(randomEmail);
             loginPage.EnterPassword(randomPassword);
             loginPage.ClickSignIn();
-            Assert.IsTrue(loginPage.SingInErrOrror(), "Sing in error ins not displayed");
+            Assert.IsTrue(loginPage.SingInErrOrrorIsDisplayed(), "Error message is not displayed");
         }
         [Test, Order(7)]
         public void InvalidEmailAdress()

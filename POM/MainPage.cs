@@ -6,7 +6,6 @@ namespace Level_Up_Project.POM
     public class MainPage
     {
         private readonly IWebDriver driver;
-        // private readonly IWebDriver driver;
         private const string createAnAccount = "(//a[contains(@href,'account/create/')])[1]";
         private const string login = "(//a[contains(@href,'account/login/')])[1]";
         private const string search = "search";
@@ -15,8 +14,6 @@ namespace Level_Up_Project.POM
         private const string whatsNew = "ui-id-3";
         private const string jacketsCategory = "(//a[contains(@href,'/jackets-women')])[2]";
         private const string jacketsPage = "//h1[@id='page-title-heading']//span";
-
-
 
         public MainPage(IWebDriver driver)
         {
@@ -37,7 +34,6 @@ namespace Level_Up_Project.POM
             driver.FindElement(By.Id(search)).Click();
 
         }
-
         public void SearchForProducts(string product)
         {
             IWebElement searchInput = driver.FindElement(By.Id(search));
@@ -61,7 +57,6 @@ namespace Level_Up_Project.POM
             wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.Id(whatsNew)));
             driver.FindElement(By.Id(whatsNew)).Click();
         }
-
         public void ChooseJacketsFromCategory()
         {
             driver.FindElement(By.XPath(jacketsCategory)).Click();

@@ -13,10 +13,6 @@ namespace Level_Up_Project
             ChromeOptions options = new ChromeOptions();
             options.AddArgument("--incognito");
             options.AddArgument("start-maximized");
-           // options.AddArgument("--disable-notifications");
-           // options.AddArgument("--ignore-certificate-errors");
-           // options.AddArgument("--disable-popup-blocking");
-           // options.AddArgument("--disable-infobars");
             options.AddArgument("--headless");
 
             IWebDriver driver = new ChromeDriver(options);
